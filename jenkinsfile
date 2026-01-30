@@ -1,14 +1,25 @@
 pipeline {
-    agent any
+    agent any 
     stages {
-        stage('Addition') {
+        stage('Plain') {
             steps {
-                script {
-                    def a = 3
-                    def b = 4
-                    def sum = a + b
-                    echo "sum of ${a} and ${b} is ${sum}"
-                }
+                echo 'Planning...' 
+                
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building...' 
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...' 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...' 
             }
         }
     }
